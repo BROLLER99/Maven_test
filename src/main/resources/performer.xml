@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:lang="http://www.springframework.org/schema/lang"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+       http://www.springframework.org/schema/util
+       http://www.springframework.org/schema/util/spring-util.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context-3.0.xsd
+       http://www.springframework.org/schema/lang
+       http://www.springframework.org/schema/lang/spring-lang.xsd">
+<!--    <context:component-scan-->
+<!--    base-package="com.chapter2" />-->
+<!--    <context:component-scan-->
+<!--            base-package="com.chapter2">-->
+<!--        <context:exclude-filter type="assignable"-->
+<!--                                expression="com.chapter2.LimeImpl"/>-->
+<!--    </context:component-scan>-->
+
+<!--    <bean id="lime" class="com.chapter2.LimeImpl">-->
+<!--    </bean>-->
+
+<!--    <bean id="coconut" class="com.chapter2.Coconut">-->
+<!--    </bean>-->
+
+
+<!--    <bean id="poeticDuke"-->
+<!--          class="com.chapter1.PoeticJuggler" scope="prototype">-->
+<!--        <constructor-arg value="#{15+30-20*2}"/>-->
+<!--        <constructor-arg>-->
+<!--            <bean class="com.chapter1.Sonnet29"/>-->
+<!--        </constructor-arg>-->
+
+<!--    </bean>-->
+
+
+<!--    <bean id="sonnet29"-->
+<!--          class="com.chapter1.Sonnet29"/>-->
+
+<!--    <bean id="duke"-->
+<!--          class="com.chapter1.Juggler"/>-->
+
+<!--    <bean id="theStage"-->
+<!--          class="com.chapter1.Stage"-->
+<!--          factory-method="getInstance"/>-->
+
+<!--    <bean id="saxophone"-->
+<!--          class="com.chapter1.Saxophone">-->
+<!--    </bean>-->
+<!--    <bean id="piano"-->
+<!--          class="com.chapter1.Piano">-->
+
+<!--    </bean>-->
+<!--    <bean id="guitar"-->
+<!--          class="com.chapter1.Guitar"-->
+<!--          scope="prototype">-->
+
+<!--    </bean>-->
+
+<!--    <bean id="hank"-->
+<!--          class="com.chapter1.OneManBand">-->
+<!--        <property name="instruments">-->
+<!--            <props>-->
+<!--                <prop key="GUITAR">STRUM STRUM STRUM</prop>-->
+<!--                <prop key="CYMBAL">CRASH CRASH CRASH</prop>-->
+<!--                <prop key="HARMONICA">HUM HUM HUM</prop>-->
+<!--            </props>-->
+<!--        </property>-->
+<!--    </bean>-->
+
+<!--    <bean id="kenny1"-->
+<!--          class="com.chapter1.Instrumentalist">-->
+<!--        <property name="song" value="#{'Jingle Bells'}"/>-->
+<!--        <property name="instrument" ref="saxophone"/>-->
+
+<!--    </bean>-->
+
+<!--    <bean id="carl"-->
+<!--          class="com.chapter1.Instrumentalist">-->
+<!--        <property name="song" value="#{kenny1.song != null ? kenny1.song : 'Greensleeves'}"/>-->
+<!--        <property name="instrument" value="#{kenny1.song == 'Jingle Bells' ? piano : saxophone}"/>-->
+<!--    </bean>-->
+
+<!--    <bean id="city"-->
+<!--          class="com.chapter1.City">-->
+<!--        <property name="cityNames"  value="#{cities.?[population gt 100000].!['Город: ' + name + ' в штате ' + state+ ' с населением ' + population + ' человек']}"/>-->
+<!--    </bean>-->
+
+<!--    <util:list id="cities" >-->
+<!--        <bean class="com.chapter1.City">-->
+<!--            <property name="name" value="Chicago"/>-->
+<!--            <property name="state" value="IL"/>-->
+<!--            <property name="population" value="2853114"/>-->
+<!--        </bean>-->
+<!--        <bean class="com.chapter1.City">-->
+<!--            <property name="name" value="Atlanta"/>-->
+<!--            <property name="state" value="GA"/>-->
+<!--            <property name="population" value="537958"/>-->
+<!--        </bean>-->
+<!--        <bean class="com.chapter1.City">-->
+<!--            <property name="name" value="Dallas"/>-->
+<!--            <property name="state" value="TX"/>-->
+<!--            <property name="population" value="1279910"/>-->
+<!--        </bean>-->
+<!--        <bean class="com.chapter1.City">-->
+<!--            <property name="name" value="Houston"/>-->
+<!--            <property name="state" value="TX"/>-->
+<!--            <property name="population" value="2242193"/>-->
+<!--        </bean>-->
+<!--        <bean class="com.chapter1.City">-->
+<!--            <property name="name" value="Odessa"/>-->
+<!--            <property name="state" value="TX"/>-->
+<!--            <property name="population" value="90943"/>-->
+<!--        </bean>-->
+<!--        <bean class="com.chapter1.City">-->
+<!--            <property name="name" value="El Paso"/>-->
+<!--            <property name="state" value="TX"/>-->
+<!--            <property name="population" value="613190"/>-->
+<!--        </bean>-->
+<!--        <bean class="com.chapter1.City">-->
+<!--            <property name="name" value="Jal"/>-->
+<!--            <property name="state" value="NW"/>-->
+<!--            <property name="population" value="1996"/>-->
+<!--        </bean>-->
+<!--        <bean class="com.chapter1.City">-->
+<!--            <property name="name" value="Las Cruces"/>-->
+<!--            <property name="state" value="NW"/>-->
+<!--            <property name="population" value="91865"/>-->
+<!--        </bean>-->
+<!--    </util:list>-->
+
+<!--    <bean id="baseSaxophonist"-->
+<!--          class="com.chapter1.Instrumentalist"-->
+<!--          abstract="true">-->
+<!--        <property name="instrument" ref="saxophone" />-->
+<!--        <property name="song" value="Jingle Bells" />-->
+<!--    </bean>-->
+<!--    <bean id="kenny" parent="baseSaxophonist" />-->
+<!--    <bean id="david" parent="baseSaxophonist" />-->
+<!--    <bean id="frank" parent="baseSaxophonist">-->
+<!--        <property name="song" value="Mary had a little lamb" />-->
+<!--    </bean>-->
+<!--    <bean id="david"-->
+<!--          class="com.chapter1.Instrumentalist">-->
+<!--        <property name="song" value="Jingle Bells" />-->
+<!--        <property name="instrument" ref="saxophone" />-->
+<!--    </bean>-->
+<!--    <bean id="kenny"-->
+<!--          class="com.chapter1.Instrumentalist">-->
+<!--        <property name="song" value="Jingle"/>-->
+<!--        <property name="instrument">-->
+<!--            <bean class="com.chapter1.Saxophone"/>-->
+<!--        </property>-->
+
+<!--    </bean>-->
+
+<!--    <bean id="basePerformer" abstract="true">-->
+<!--        <property name="song" value="Somewhere Over the Rainbow" />-->
+<!--    </bean>-->
+
+<!--    <bean id="taylor"-->
+<!--          class="com.chapter1.Vocalist"-->
+<!--          parent="basePerformer" />-->
+
+<!--    <bean id="stevie"-->
+<!--          class="com.chapter1.Instrumentalist">-->
+<!--        <lookup-method name="getInstrument" bean="guitar" />-->
+<!--        <property name="song" value="Greensleeves" />-->
+<!--    </bean>-->
+
+<!--    <bean id="harry"-->
+<!--          class="com.chapter1.Magician">-->
+<!--        <property name="magicBox" ref="magicBox" />-->
+<!--        <property name="magicWords" value="Bippity boppity boo" />-->
+<!--    </bean>-->
+
+<!--    <bean id="magicBox"-->
+<!--          class="com.chapter1.MagicBoxImpl">-->
+<!--    <replaced-method-->
+<!--            name="getContents"-->
+<!--            replacer="tigerReplacer" />-->
+<!--    </bean>-->
+
+<!--    <bean id="tigerReplacer"-->
+<!--          class="com.chapter1.TigerReplacer" />-->
+
+<!--    <bean id="pianist"-->
+<!--          class="com.chapter1.Instrumentalist"-->
+<!--          abstract="true">-->
+<!--        <property name="song" value="Chopsticks" />-->
+<!--        <property name="instrument">-->
+<!--            <bean class="com.chapter1.Piano" />-->
+<!--        </property>-->
+<!--    </bean>-->
+
+<!--    <bean-->
+<!--            class="org.springframework.beans.factory.config.CustomEditorConfigurer">-->
+<!--        <property name="customEditors">-->
+<!--            <map>-->
+<!--                <entry key="com.chapter1.PhoneNumber">-->
+<!--                    <bean id="phoneEditor"-->
+<!--                          class="com.chapter1.PhoneEditor">-->
+<!--                    </bean>-->
+<!--                </entry>-->
+<!--            </map>-->
+<!--        </property>-->
+<!--    </bean>-->
+
+<!--    <bean id="contact"-->
+<!--          class="com.chapter1.Contact">-->
+<!--        <property name="phoneNumber" value="888-555-1212" />-->
+<!--    </bean>-->
+<!--    <bean-->
+<!--            class="com.chapter1.Fuddifier"/>-->
+<!--    <bean id="bugs" class="com.chapter1.Rabbit">-->
+<!--        <property name="description" value="That rascally rabbit!" />-->
+<!--    </bean>-->
+
+
+
+</beans>
